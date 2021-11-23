@@ -4,7 +4,7 @@
 
 ### Project structure
 ```
-📦d-ral
- ┣━📂modules             ─ contains CMake modules files (.cmake)
- ┗━📂toolchains          ─ contains toolchains files
+📦cmake-utility
+ ┣━📂modules             ─ CMake modules files
+ ┗━📂toolchains          ─ toolchains files
 ```
