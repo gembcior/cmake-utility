@@ -1,73 +1,73 @@
-find_path(CMAKE_C_COMPILER
+find_program(CMAKE_C_COMPILER
   NAMES
     gcc
   DOC "GNU GCC C Toolchain"
 )
 
-find_path(CMAKE_CXX_COMPILER
+find_program(CMAKE_CXX_COMPILER
   NAMES
     g++
   DOC "GNU GCC C++ Toolchain"
 )
 
-find_path(CMAKE_ASM_COMPILER
+find_program(CMAKE_ASM_COMPILER
   NAMES
     gcc
   DOC "GNU GCC ASM Toolchain"
 )
 
-find_path(CMAKE_AR
+find_program(CMAKE_AR
   NAMES
     ar
-  DOC "Ar"
+  DOC "Path to ar program"
   PATHS
     ${NATIVE_TOOLCHAIN}
 )
 
-find_path(CMAKE_RANLIB
+find_program(CMAKE_RANLIB
   NAMES
     ranlib
-  DOC "Ranlib"
+  DOC "Path to ranlib program"
   PATHS
     ${NATIVE_TOOLCHAIN}
 )
 
-find_path(TOOLCHAIN_OBJCOPY
+find_program(TOOLCHAIN_OBJCOPY
   NAMES
     objcopy
-  DOC "Objcopy"
+  DOC "Path to objcopy program"
   PATHS
     ${NATIVE_TOOLCHAIN}
 )
 
-find_path(TOOLCHAIN_OBJDUMP
+find_program(TOOLCHAIN_OBJDUMP
   NAMES
     objdump
-  DOC "Objdump"
+  DOC "Path to objdump program"
   PATHS
     ${NATIVE_TOOLCHAIN}
 )
 
-find_path(TOOLCHAIN_SIZE
+find_program(TOOLCHAIN_SIZE
   NAMES
     size
-  DOC "Size"
+  DOC "Path to size program"
   PATHS
     ${NATIVE_TOOLCHAIN}
 )
 
-find_path(TOOLCHAIN_NM
+find_program(TOOLCHAIN_NM
   NAMES
     nm
-  DOC "Nm"
+  DOC "Path to nm program"
   PATHS
     ${NATIVE_TOOLCHAIN}
 )
 
-find_path(TOOLCHAIN_STRIP
+find_program(TOOLCHAIN_STRIP
   NAMES
     strip
-  DOC "Strip"
+  DOC "Path to strip program"
   PATHS
     ${NATIVE_TOOLCHAIN}
 )

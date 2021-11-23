@@ -12,6 +12,7 @@ function(TESTING_TARGET_ADD_TEST TARGET)
     PRIVATE
       gtest
       gmock
+      gtest_main
       ${TARGET}
   )
 
