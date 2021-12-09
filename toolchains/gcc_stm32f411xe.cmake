@@ -11,7 +11,6 @@ string(CONCAT MCU_FLAGS
 string(CONCAT GCC_FLAGS
   "-Wall "
   "-Werror "
-  "-Wfatal-errors "
   "-fno-builtin "
   "-ffunction-sections "
   "-fdata-sections "

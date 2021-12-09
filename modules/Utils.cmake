@@ -1,7 +1,7 @@
 function(FILE_INSTALL TARGET FILE)
   install(FILES ${FILE}
     DESTINATION Release/${TARGET}
-    CONFIGURATIONS Release
+    CONFIGURATIONS Release RelWithDebInfo
   )
   install(FILES ${FILE}
     DESTINATION Debug/${TARGET}
@@ -12,7 +12,7 @@ endfunction()
 
 function(TARGET_INSTALL TARGET)
   install(TARGETS ${TARGET}
-    CONFIGURATIONS Release
+    CONFIGURATIONS Release RelWithDebInfo
     RUNTIME DESTINATION Release/bin
   )
 
@@ -73,7 +73,6 @@ endfunction()
 
 
 function(TARGET_APP_RELEASE TARGET)
-  set_property(TARGET ${TARGET} PROPERTY SUFFIX "")
   print_target_size(${TARGET})
   generate_target_hex_file(${TARGET})
   generate_target_bin_file(${TARGET})

@@ -2,18 +2,24 @@ find_program(CMAKE_C_COMPILER
   NAMES
     gcc
   DOC "GNU GCC C Toolchain"
+  PATHS
+    ${NATIVE_TOOLCHAIN}
 )
 
 find_program(CMAKE_CXX_COMPILER
   NAMES
     g++
   DOC "GNU GCC C++ Toolchain"
+  PATHS
+    ${NATIVE_TOOLCHAIN}
 )
 
 find_program(CMAKE_ASM_COMPILER
   NAMES
     gcc
   DOC "GNU GCC ASM Toolchain"
+  PATHS
+    ${NATIVE_TOOLCHAIN}
 )
 
 find_program(CMAKE_AR
