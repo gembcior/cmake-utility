@@ -20,7 +20,6 @@ string(CONCAT GCC_FLAGS
   "-fomit-frame-pointer "
   "-ffast-math "
   "-ftree-vectorize "
-  "--specs=nano.specs "
 )
 
 string(CONCAT C_FLAGS
@@ -46,7 +45,8 @@ string(CONCAT LINKER_FLAGS
   "-Wl,--gc-sections "
   "-Wl,-lc,-lm "
   "-static "
-  "--specs=nosys.specs "
+  "-specs=nano.specs "
+  "-specs=nosys.specs "
 )
 
 set(CMAKE_C_FLAGS_INIT ${C_FLAGS})
