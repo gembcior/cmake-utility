@@ -6,33 +6,17 @@ string(CONCAT MCU_FLAGS
   "-mfloat-abi=hard "
   "-mabi=aapcs "
   "-mthumb "
-)
 
-string(CONCAT GCC_FLAGS
-  "-Wall "
-  "-Werror "
-  "-fno-builtin "
-  "-ffunction-sections "
-  "-fdata-sections "
-  "-fno-exceptions "
-  "-fno-unwind-tables "
-  "-fstack-usage "
-  "-fomit-frame-pointer "
-  "-ffast-math "
-  "-ftree-vectorize "
+  "-specs=nano.specs "
+  "-specs=nosys.specs "
 )
 
 string(CONCAT C_FLAGS
   ${MCU_FLAGS}
-  ${GCC_FLAGS}
 )
 
 string(CONCAT CXX_FLAGS
   ${MCU_FLAGS}
-  ${GCC_FLAGS}
-  "-fno-rtti "
-  "-fno-threadsafe-statics "
-  "-fno-use-cxa-atexit "
 )
 
 string(CONCAT ASM_FLAGS
@@ -41,12 +25,8 @@ string(CONCAT ASM_FLAGS
 )
 
 string(CONCAT LINKER_FLAGS
-  ${MCU_FLAGS}
   "-Wl,--gc-sections "
-  "-Wl,-lc,-lm "
   "-static "
-  "-specs=nano.specs "
-  "-specs=nosys.specs "
 )
 
 set(CMAKE_C_FLAGS_INIT ${C_FLAGS})
