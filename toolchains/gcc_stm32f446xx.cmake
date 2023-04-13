@@ -8,7 +8,6 @@ string(CONCAT MCU_FLAGS
   "-mthumb "
 
   "-specs=nano.specs "
-  "-specs=nosys.specs "
 )
 
 string(CONCAT C_FLAGS

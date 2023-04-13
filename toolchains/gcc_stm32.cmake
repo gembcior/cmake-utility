@@ -10,8 +10,6 @@ find_path(GNU_ARM_EMBEDDED_TOOLCHAIN
   DOC "GNU Arm Embedded Toolchain"
   PATHS
     ${STM32_TOOLCHAIN}
-    $ENV{HOME}/tools/toolchains/gcc-arm-none-eabi-10.3-2021.07/bin
-    /opt/gcc-arm-none-eabi-10.3-2021.10/bin
 )
 
 set(CMAKE_C_COMPILER "${GNU_ARM_EMBEDDED_TOOLCHAIN}/arm-none-eabi-gcc")
