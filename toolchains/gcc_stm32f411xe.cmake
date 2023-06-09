@@ -24,7 +24,6 @@ string(CONCAT ASM_FLAGS
 )
 
 string(CONCAT LINKER_FLAGS
-  ${MCU_FLAGS}
   "-Wl,--gc-sections "
   "-static "
 )
